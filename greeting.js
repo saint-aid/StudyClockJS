@@ -4,18 +4,18 @@ const form = document.querySelector(".js-form"),
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
-function saveNam(text){
-    localStorage.setItem(USER_LS,text);
+function saveName(text){
+    localStorage.setItem(USER_LS,text);//로컬에 저장
 }
 
 function handleSubmit(event){
-    event.preventDefault();
+    event.preventDefault(); //
     const currentValue = input.value;
     paintGreeting(currentValue);
-    saveNam(currentValue);
+    saveName(currentValue);
 }
 
-function askForName(){
+function askForName(){ 
     form.classList.add(SHOWING_CN);
     form.addEventListener("submit",handleSubmit);
 }    
@@ -23,7 +23,7 @@ function askForName(){
 function paintGreeting(text){
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    greeting.innerText = `Hello ${text}`; //저장된 이름 설정
 }
 
 function loadName(){

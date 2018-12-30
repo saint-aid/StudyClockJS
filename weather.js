@@ -16,7 +16,7 @@ function getWeather(lat,lng){
 }
 
 function saveCoords(coordsObj){
-    localStorage.setItem(COORDS,JSON.stringify(coordsObj));
+    localStorage.setItem(COORDS,JSON.stringify(coordsObj)); //로컬에 저장
 }
 
 function handleGeoSucces(position){ // 위도 경도 가져오기
